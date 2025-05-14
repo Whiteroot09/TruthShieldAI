@@ -1,0 +1,60 @@
+numpy 
+pandas 
+scikit-learn 
+flask transformers
+tensorflow
+opencv-python
+
+
+
+
+
+
+
+
+
+truthshield-ai/
+│
+├── 📂 data/
+│   ├── fake_news/
+│   │   ├── raw/                         # Raw CSV/JSON datasets
+│   │   └── processed/                   # Cleaned & tokenized data
+│   └── deepfake/
+│       ├── raw/                         # DFDC, FaceForensics++ datasets
+│       └── extracted_faces/            # Cropped face images from video
+│
+├── 📂 models/
+│   ├── fake_news/
+│   │   ├── bert_model/                 # Trained BERT or TF-IDF models
+│   │   └── tfidf_logreg.pkl            # Optional TF-IDF + Logistic Regression
+│   └── deepfake/
+│       ├── cnn_model.h5                # CNN model for image deepfake
+│       └── xception/                   # Pretrained model (if any)
+│
+├── 📂 notebooks/
+│   ├── fake_news_training.ipynb       # Training BERT / TF-IDF model
+│   └── deepfake_training.ipynb        # CNN training / face extraction
+│
+├── 📂 app/
+│   ├── 📂 static/                      # CSS/JS if using Flask UI
+│   ├── 📂 templates/                   # HTML files (for Flask)
+│   ├── 📂 utils/
+│   │   ├── fake_news_utils.py         # Text cleaner, tokenizer, loader
+│   │   ├── deepfake_utils.py          # Face extractor, video frame reader
+│   │   └── predictions.py             # Inference functions for both
+│   ├── 📄 routes.py                    # Flask route handlers
+│   └── 📄 app.py                       # Main app launcher
+│
+├── 📂 streamlit_ui/
+│   └── 📄 streamlit_app.py            # Alternate UI using Streamlit
+│
+├── 📂 logs/
+│   └── activity_logs.db               # SQLite DB or .log file
+│
+├── 📂 reports/
+│   ├── screenshots/                   # App screenshots
+│   └── final_report.docx              # Documentation and thesis
+│
+├── 📂 requirements.txt                # Project dependencies
+├── 📂 README.md                       # Project overview
+└── 📂 run.sh                          # Shell script to run app (optional)
